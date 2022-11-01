@@ -8,7 +8,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Bom dia Ituiutaba</h1>
-    <h2>01 de Novembro de 2022</h2>
+    <div class="container">
+        <h1>Flask APP Iris</h1>
+        <h2>Formulário</h2>
+        <form action="/predict" method="post">
+            <p>Largura da pétala: <input type="text" name="larg_petala" id="" value="0.13"></p>
+            <p>Comprimento da pétala: <input type="text" name="comp_petala" id="" value="0.41"></p>
+            <p>Largura da sépala: <input type="text" name="larg_sepala" id="" value="0.28"></p>
+            <p>Comprimento da sépala: <input type="text" name="comp_sepala" id="" value="0.57"></p>
+            <p><input type="submit" value="Enviar"></p>
+
+        </form>
+    </div>
 </body>
 </html>
