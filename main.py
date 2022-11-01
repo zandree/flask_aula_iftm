@@ -19,12 +19,18 @@ def predict():
             float(request.form['larg_petala'])
         ]
         y_pred = predictions.predict(dados)
-        return jsonify({"resultado" : y_pred})
+        return jsonify({
+            "setosa" : f'{y_pred[0]}',
+            "versicolor" : f'{y_pred[1]}',
+            "virginica" : f'{y_pred[2]}'
+        })
     elif request.method == 'GET':
         return jsonify({"mensagem" : "Utilize o formulário"})
 
-
-
-
 if __name__ == '__main__':
     app.run(debug=True, port=os.getenv("PORT", default=5000))
+
+#- para rodar localmente
+# pip install flask
+# pip install torch numpy torchvision
+# flask --app main run
